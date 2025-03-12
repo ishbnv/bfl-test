@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Узнайте, как бесплатно списать долги через МФЦ без суда</title>
+  </head>
+  <body>
+    <header>
+      <a class="header__logo" href="#">
+        <img
+          class="header__logo-image"
+          src="./images/logo.svg"
+          alt="Логотип 'Госбанкротство'"
+        />
+      </a>
+      <address class="address address__header">
+        <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
+        <p>Работаем в 130 городах России</p>
+      </address>
+      <button class="header__button">Бесплатная консультация</button>
+    </header>
+    <main>
+      <section class="cover">
+        <div class="cover__column">
+          <div class="cover__header">
+            <h1 class="cover__title">
+              Узнайте, как бесплатно списать долги через МФЦ без суда по гос.
+              программе
+            </h1>
+            <p class="cover__description">
+              Ответьте на 7 вопросов и получите бесплатную консультацию юриста
+              по вашей ситуации
+            </p>
+            <button class="cover__button">Узнать стоимость</button>
+          </div>
+          <ul class="cover__advantages-list">
+            <li class="cover__advantages-list-item">
+              <img
+                class="cover__advantages-icon"
+                src="./images/House.svg"
+                alt="Иконка 'домик'"
+              />
+              <p class="cover__advantages-text">Сохраним имущество</p>
+            </li>
+            <li class="cover__advantages-list-item">
+              <img
+                class="cover__advantages-icon"
+                src="./images/PhoneCall.svg"
+                alt="Иконка 'телефонный звонок'"
+              />
+              <p class="cover__advantages-text">Избавим от коллекторов</p>
+            </li>
+          </ul>
+        </div>
+        <div class="cover__column">
+          <img
+            class="cover__image"
+            src="./images/Judicial scales.png"
+            alt="Весы правосудия"
+          />
+        </div>
+      </section>
+      <section class="quiz">
+        <header class="quiz__header">
+          <h2 class="quiz__title">
+            Ответьте на 7 простых вопросов, чтобы узнать шансы и стоимость
+            списания долгов
+          </h2>
+        </header>
+        <form action="#" method="POST">
+          <!-- Вопрос 1 -->
+          <fieldset>
+            <legend>Какая сумма вашей задолженности?</legend>
+            <label
+              ><input type="radio" name="debt" value="less300" />менее 300 000
+              рублей</label
+            >
+            <label
+              ><input type="radio" name="debt" value="300-500" checked />300 000
+              – 500 000 рублей</label
+            >
+            <label
+              ><input type="radio" name="debt" value="500-1000" />500 000 – 1
+              000 000 рублей</label
+            >
+            <label
+              ><input type="radio" name="debt" value="1000-1500" />1 000 000 – 1
+              500 000 рублей</label
+            >
+            <label
+              ><input type="radio" name="debt" value="more1500" />более 1 500
+              000 рублей</label
+            >
+          </fieldset>
+
+          <!-- Вопрос 2 -->
+          <fieldset>
+            <legend>Какое имущество у вас имеется?</legend>
+            <label
+              ><input
+                type="checkbox"
+                name="property"
+                value="apartment"
+                checked
+              />квартира (единственное жильё)</label
+            >
+            <label
+              ><input type="checkbox" name="property" value="land" />земельный
+              участок / загородный дом</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="property"
+                value="car"
+              />автомобиль</label
+            >
+            <label
+              ><input type="checkbox" name="property" value="other" />иное
+              имущество</label
+            >
+            <label
+              ><input type="checkbox" name="property" value="none" />нет
+              имущества</label
+            >
+          </fieldset>
+
+          <!-- Вопрос 3 -->
+          <fieldset>
+            <legend>Сколько времени вы не платите по кредитам?</legend>
+            <label
+              ><input
+                type="radio"
+                name="credit_delay"
+                value="less3"
+                checked
+              />до 3-х месяцев</label
+            >
+            <label
+              ><input type="radio" name="credit_delay" value="3-12" />от 3-х до
+              12-ти месяцев</label
+            >
+            <label
+              ><input type="radio" name="credit_delay" value="more12" />больше
+              года</label
+            >
+            <label
+              ><input type="radio" name="credit_delay" value="ontime" />плачу
+              вовремя</label
+            >
+          </fieldset>
+
+          <!-- Вопрос 4 -->
+          <fieldset>
+            <legend>Имеется ли у вас действующая ипотека?</legend>
+            <label
+              ><input
+                type="radio"
+                name="mortgage"
+                value="yes"
+                checked
+              />да</label
+            >
+            <label><input type="radio" name="mortgage" value="no" /> нет</label>
+          </fieldset>
+
+          <!-- Вопрос 5 -->
+          <fieldset>
+            <legend>Имеется ли обязательство по выплате алиментов?</legend>
+            <label
+              ><input
+                type="radio"
+                name="alimony"
+                value="yes"
+                checked
+              />да</label
+            >
+            <label><input type="radio" name="alimony" value="no" />нет</label>
+          </fieldset>
+
+          <!-- Вопрос 6 -->
+          <fieldset>
+            <legend>Потребуется ли рассрочка на услуги банкротства?</legend>
+            <label
+              ><input
+                type="radio"
+                name="installment"
+                value="yes"
+                checked
+              />да</label
+            >
+            <label
+              ><input type="radio" name="installment" value="no" />нет</label
+            >
+          </fieldset>
+
+          <!-- Вопрос 6 -->
+          <fieldset>
+            <legend>Потребуется ли рассрочка на услуги банкротства?</legend>
+            <label
+              ><input
+                type="radio"
+                name="installment"
+                value="in-call"
+                checked
+              />По звонку</label
+            >
+          </fieldset>
+        </form>
+      </section>
+      <section class="calculator">
+        <div class="calculator__form-container">
+          <h3 class="calculator__title"></h3>
+          <form class="calculator__form" action="#" method="post">
+            <label for="full-name">Фамилия, имя и отчество</label>
+            <input
+              class="calculator__form-input"
+              type="text"
+              id="full-name"
+              name="full_name"
+              placeholder="Фамилия, имя и отчество"
+              required
+            />
+
+            <label for="city">Город</label>
+            <select
+              class="calculator__form-select"
+              id="city"
+              name="city"
+              required
+            >
+              <option value="" disabled selected>Город</option>
+              <option value="moscow">Москва</option>
+              <option value="spb">Санкт-Петербург</option>
+              <option value="other">Другой</option>
+            </select>
+
+            <label for="phone">Номер телефона</label>
+            <input
+              class="calculator__form-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Номер телефона"
+              required
+            />
+
+            <button class="calculator__form-submit-btn" type="submit">
+              Рассчитать стоимость и сроки
+            </button>
+
+            <p class="calculator__form-consent-text">
+              Нажимая кнопку, вы даёте согласие на обработку персональных данных
+              согласно
+              <a href="#">политике конфиденциальности</a>
+            </p>
+          </form>
+        </div>
+        <div class="calculator__column">
+          <div class="calculator__progress-bar">
+            <p>Уже заполнено</p>
+            <p>70%</p>
+            <p>Осталось совсем немного, чтобы списать долги</p>
+          </div>
+          <div class="calculator__toggle calculator__toggle-active">
+            <button class="calculator__toggle-btn" id="toggleButton">
+              <span class="toggle-circle"></span>
+            </button>
+            <h4 class="calculator__toggle-title"></h4>
+          </div>
+          <div class="calculator__toggle">
+            <button class="calculator__toggle-btn" id="toggleButton">
+              <span class="toggle-circle"></span>
+            </button>
+            <h4 class="calculator__toggle-title"></h4>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <ul class="reviews__card-list">
+          <li class="reviews__card-list-item">
+            <!-- position: relative -->
+            <article class="card">
+              <img class="card__image" src="#" alt="Аватар пользователя" />
+              <div class="card__content">
+                <h5 class="card__title">Павлов Михаил Александрович</h5>
+                <p class="card__city-text">Пенза</p>
+                <p class="card__text">
+                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                  текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст
+                </p>
+              </div>
+              <!-- position: absolute -->
+              <p class="card__counter">1 из 110</p>
+            </article>
+          </li>
+          <li class="reviews__card-list-item">
+            <!-- position: relative -->
+            <article class="card">
+              <img class="card__image" src="#" alt="Аватар пользователя" />
+              <div class="card__content">
+                <h5 class="card__title">Павлов Михаил Александрович</h5>
+                <p class="card__city-text">Пенза</p>
+                <p class="card__text">
+                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                  текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст
+                </p>
+              </div>
+              <!-- position: absolute -->
+              <p class="card__counter">1 из 110</p>
+            </article>
+          </li>
+        </ul>
+        <div class="reviews__card-switcher">
+          <button class="button__left"></button>
+          <button class="button__right"></button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <a class="header__logo" href="#">
+        <img
+          class="header__logo-image"
+          src="./images/logo.svg"
+          alt="Логотип 'Госбанкротство'"
+        />
+      </a>
+      <div class="footer__info-block">
+        <address class="address">
+          <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
+          <p>Работаем в 130 городах России</p>
+        </address>
+        <address class="juridical-info">
+          ИП Староквашев Денис Валерьевич ИНН 631973075209 | ОГРНИП
+          318631300056420 | bflleadpromo@yandex.ru
+        </address>
+        <a class="footer__link" href="#">Все права защищены © 2025</a>
+        <p></p>
+      </div>
+    </footer>
+    <script src="./scripts/toggle-button.js"></script>
+  </body>
+</html>

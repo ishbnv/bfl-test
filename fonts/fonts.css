@@ -1,0 +1,9 @@
+@font-face {
+  font-family: GolosText_VF;
+  src:
+    url(./Golos\ Text_VF.WOFF2) format('woff2'),
+    url(./Golos\ Text_VF.WOFF) format('woff'),
+    url(./Golos\ Text_VF.ttf) format('ttf'),
+    url(./Golos\ Text_VF.EOT) format('eot');
+  font-display: swap;
+}
