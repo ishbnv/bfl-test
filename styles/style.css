@@ -1,8 +1,9 @@
 :root {
-  --main-color: #3965AD;
-  --accent-color: #F2444E;
-  --secondary-color: #F3F4F9;
-  --green: #2BB046;
+  --main-color: #3965ad;
+  --accent-color: #f2444e;
+  --secondary-color: #f3f4f9;
+  --green: #2bb046;
+  --article-secondary: #252a38;
   --font-size: 20px;
   --button-padding: 20px;
   --line-height: 24px;
@@ -16,7 +17,6 @@
 } */
 
 .container {
-
 }
 
 .header {
@@ -39,75 +39,79 @@
 }
 
 .address__header {
-  line-height: 120%;
   align-items: end;
   padding: 0 20px;
+  line-height: 120%;
 }
 
 .address__link {
-  text-decoration: none;
   max-width: max-content;
   color: var(--main-color);
   font-weight: 600;
+  text-decoration: none;
 }
 
 .address__text {
-  color: rgb(0 0 0 / .5);
+  color: rgb(0 0 0 / 0.5);
   font-size: 16px;
 }
 
 .button {
   width: max-content;
+  border: 1px solid;
   border-radius: 14px;
   padding: var(--button-padding);
-  border: 1px solid;
   font-weight: var(--font-weight-demibold);
   font-size: 16px;
 }
 
 .button__header {
+  border-color: rgb(70 70 70 / 0.5);
+  color: var(--main-color);
   /* Убрать тень — контейнер растянут */
   background-color: transparent;
-  border-color: rgb(70 70 70 / .5);
-  color: var(--main-color);
 }
 
 .cover {
   padding: 0 40px;
 }
 
-.card,
+.card {
+  border-radius: 28px;
+  background-color: var(--secondary-color);
+  width: 100%;
+}
+
 .card__cover {
   display: grid;
-  grid-template-columns: 7fr 3fr;
-  align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
-  background-color: var(--secondary-color);
-  border-radius: 28px;
+  grid-template-columns: 7fr 3fr;
+  justify-content: space-between;
+  align-items: center;
   padding: 60px 30px 30px;
-  
+  background-color: var(--secondary-color);
 }
 
 .cover__header {
-  
 }
 
 .cover__title {
+  font-weight: 600;
   font-size: 42px;
 }
 
 .cover__description {
-  padding: 18px 0;
   width: 60%;
+  padding: 18px 0;
+  color: var(--article-secondary);
 }
 
 .cover__card-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .cover__card-image {
@@ -115,15 +119,15 @@
 }
 
 .button__cover {
-  background-color: var(--accent-color);
   color: #fff;
+  background-color: var(--accent-color);
 }
 
 .cover__benefits-list {
   display: flex;
-  list-style: none;
   align-items: center;
   gap: 0 40px;
+  list-style: none;
 }
 
 .cover__benefits-list-item {
@@ -142,57 +146,129 @@
 
 .cover__benefits-text {
   width: max-content;
+  color: var(--article-secondary);
 }
 
-/* ФОРМА КВИЗА, ВЕРНУТСЬЯ ПОЗЖЕ */
-
-/* body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+.quiz {
   display: flex;
-  justify-content: center;
   align-items: center;
+  width: 100%;
   min-height: 100vh;
-  padding: 20px;
+  padding: 82px 40px;
 }
 
-Контейнер квиза
-.quiz-container {
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
+.quiz__header {
+  border-radius: 28px;
+  padding: 35px 42px 30px;
+  background-color: var(--main-color);
+}
+
+.quiz__title {
+  width: 60%;
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+/* .quiz-container {
   width: 400px;
+  border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+} */
+
+.quiz__form {
+  padding: 1.8em 2em;
 }
 
-Поля вопросов
-fieldset {
+.quiz__fieldset {
+  margin-bottom: 55px;
+  padding: 0;
   border: none;
-  margin-bottom: 20px;
 }
 
-Заголовки вопросов
-legend {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
+.quiz__fieldset-zero-margin {
+  margin: 0;
 }
 
-Стилизация вариантов
-label {
+.quiz__legend {
+  margin-bottom: 22px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.quiz__label {
+  position: relative;
   display: flex;
   align-items: center;
-  font-size: 14px;
-  padding: 8px 0;
+  padding: 12px 0;
   cursor: pointer;
 }
 
-input[type="radio"], input[type="checkbox"] {
-  margin-right: 8px;
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 25px 0 0;
+  border: 1px solid #959595;
+  vertical-align: text-bottom;
+  background: #fff;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
 }
 
-Кнопка отправки
-button {
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="radio"]:hover {
+  border-color: var(--main-color);
+}
+
+input[type="radio"]:checked {
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"] {
+  border-radius: 25%;
+}
+
+input[type="checkbox"]:hover {
+  border-color: var(--main-color);
+}
+
+input[type="checkbox"]:checked {
+  border-color: var(--main-color);
+  background: var(--main-color);
+  background-image: url('../images/Check.svg');
+  background-size: 10px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+}
+
+/* Кнопка отправки */
+/* button {
   background-color: #007bff;
   color: white;
   font-size: 16px;
@@ -202,20 +278,15 @@ button {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
 } */
 
-
-
-
+/* button:hover {
+  background-color: #0056b3;
+} */
 
 /* ФОРМА КАЛЬКУЛЯТОРА, ВЕРНУТСЬЯ ПОЗЖЕ */
 
 /* body {
-  font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
@@ -284,10 +355,6 @@ button:hover {
   color: white;
   text-decoration: underline;
 } */
-
-
-
-
 
 /* КНОПКА ПЕРЕКЛЮЧАТЕЛЯ, ВЕРНУТСЬЯ ПОЗЖЕ */
 
