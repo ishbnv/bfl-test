@@ -8,6 +8,8 @@ body {
   width: 1440px;
   margin: 0 auto;
   font-family: GolosText_VF, sans-serif;
+  background-color: #FEFEFF;
+  font-size: 20px;
 }
 
 h1,
