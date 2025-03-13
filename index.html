@@ -22,49 +22,58 @@
         <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
         <p class="address__text">Работаем в 130 городах России</p>
       </address>
-      <button class="header__button">Бесплатная консультация</button>
+      <button class="button button__header">Бесплатная консультация</button>
     </header>
     <main>
       <section class="cover">
-        <div class="cover__column">
-          <div class="cover__header">
-            <h1 class="cover__title">
-              Узнайте, как бесплатно списать долги через МФЦ без суда по гос.
-              программе
-            </h1>
-            <p class="cover__description">
-              Ответьте на 7 вопросов и получите бесплатную консультацию юриста
-              по вашей ситуации
-            </p>
-            <button class="cover__button">Узнать стоимость</button>
+        <div class="card">
+          <div class="cover__card-content">
+            <div class="cover__header">
+              <h1 class="cover__title">
+                Узнайте, как бесплатно списать долги через МФЦ без суда по гос.
+                программе
+              </h1>
+              <p class="cover__description">
+                Ответьте на 7 вопросов и получите бесплатную консультацию юриста
+                по вашей ситуации
+              </p>
+              <button class="button button__cover">Узнать стоимость</button>
+            </div>
+            <ul class="cover__benefits-list">
+              <li class="cover__benefits-list-item">
+                <div class="cover__benefits-list-item-content">
+                  <img
+                    class="cover__benefits-icon"
+                    src="./images/House.svg"
+                    alt="Иконка 'домик'"
+                  />
+                  <p class="cover__benefits-text">Сохраним имущество</p>
+                </div>
+              </li>
+              <li class="cover__benefits-list-item">
+                <div class="cover__benefits-list-item-content">
+                  <img
+                    class="cover__benefits-icon"
+                    src="./images/PhoneCall.svg"
+                    alt="Иконка 'телефонный звонок'"
+                  />
+                  <p class="cover__benefits-text">Избавим от коллекторов</p>
+                </div>
+              </li>
+            </ul>
           </div>
-          <ul class="cover__advantages-list">
-            <li class="cover__advantages-list-item">
-              <img
-                class="cover__advantages-icon"
-                src="./images/House.svg"
-                alt="Иконка 'домик'"
-              />
-              <p class="cover__advantages-text">Сохраним имущество</p>
-            </li>
-            <li class="cover__advantages-list-item">
-              <img
-                class="cover__advantages-icon"
-                src="./images/PhoneCall.svg"
-                alt="Иконка 'телефонный звонок'"
-              />
-              <p class="cover__advantages-text">Избавим от коллекторов</p>
-            </li>
-          </ul>
-        </div>
-        <div class="cover__column">
-          <img
-            class="cover__image"
-            src="./images/JudicialScales.png"
-            alt="Весы правосудия"
-          />
+          <div class="cover__card-image">
+            <img
+              class="cover__image"
+              src="./images/JudicialScales.png"
+              alt="Весы правосудия"
+            />
+          </div>
         </div>
       </section>
+
+      <!-- Объединить секции квиза и калькулятора -->
+
       <section class="quiz">
         <header class="quiz__header">
           <h2 class="quiz__title">

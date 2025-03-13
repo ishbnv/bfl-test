@@ -9,10 +9,14 @@
   --font-weight-demibold: 500;
 }
 
-.layout-common {
+/* .layout-common {
   padding: 0 40px;
   font-weight: normal;
   
+} */
+
+.container {
+
 }
 
 .header {
@@ -28,7 +32,6 @@
 }
 
 .address {
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   max-width: 640px;
@@ -53,19 +56,93 @@
   font-size: 16px;
 }
 
-.header__button {
-  /* Убрать тень — контейнер растянут */
+.button {
   width: max-content;
   border-radius: 14px;
   padding: var(--button-padding);
-  background-color: transparent;
   border: 1px solid;
-  border-color: rgb(70 70 70 / .5);
   font-weight: var(--font-weight-demibold);
-  color: var(--main-color);
   font-size: 16px;
 }
 
+.button__header {
+  /* Убрать тень — контейнер растянут */
+  background-color: transparent;
+  border-color: rgb(70 70 70 / .5);
+  color: var(--main-color);
+}
+
+.cover {
+  padding: 0 40px;
+}
+
+.card,
+.card__cover {
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--secondary-color);
+  border-radius: 28px;
+  padding: 60px 30px 30px;
+  
+}
+
+.cover__header {
+  
+}
+
+.cover__title {
+  font-size: 42px;
+}
+
+.cover__description {
+  padding: 18px 0;
+  width: 60%;
+}
+
+.cover__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.cover__card-image {
+  width: 90%;
+}
+
+.button__cover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.cover__benefits-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 0 40px;
+}
+
+.cover__benefits-list-item {
+  width: max-content;
+}
+
+.cover__benefits-list-item-content {
+  display: flex;
+  align-items: center;
+  gap: 0 4px;
+}
+
+.cover__benefits-icon {
+  width: max-content;
+}
+
+.cover__benefits-text {
+  width: max-content;
+}
 
 /* ФОРМА КВИЗА, ВЕРНУТСЬЯ ПОЗЖЕ */
 
