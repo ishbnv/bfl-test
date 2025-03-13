@@ -72,165 +72,246 @@
         </div>
       </section>
 
-      <!-- Объединить секции квиза и калькулятора -->
-
       <section class="quiz">
         <div class="card">
-        <header class="quiz__header">
-          <h2 class="quiz__title">
-            Ответьте на 7 простых вопросов, чтобы узнать шансы и стоимость
-            списания долгов
-          </h2>
-        </header>
-        <form class="quiz__form" action="#" method="POST">
-          <!-- Вопрос 1 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Какая сумма вашей задолженности?</legend>
-            <label class="quiz__label"
-              ><input type="radio" name="debt" value="less300" />менее 300 000
-              рублей</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="debt" value="300-500" checked />300 000
-              – 500 000 рублей</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="debt" value="500-1000" />500 000 – 1
-              000 000 рублей</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="debt" value="1000-1500" />1 000 000 – 1
-              500 000 рублей</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="debt" value="more1500" />более 1 500
-              000 рублей</label
-            >
-          </fieldset>
+          <header class="quiz__header">
+            <h2 class="quiz__title">
+              Ответьте на 7 простых вопросов, чтобы узнать шансы и стоимость
+              списания долгов
+            </h2>
+          </header>
+          <form class="quiz__form" action="#" method="POST">
+            <!-- Вопрос 1 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Какая сумма вашей задолженности?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="debt"
+                  value="less300"
+                />менее 300 000 рублей</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="debt"
+                  value="300-500"
+                  checked
+                />300 000 – 500 000 рублей</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="debt"
+                  value="500-1000"
+                />500 000 – 1 000 000 рублей</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="debt"
+                  value="1000-1500"
+                />1 000 000 – 1 500 000 рублей</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="debt"
+                  value="more1500"
+                />более 1 500 000 рублей</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 2 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Какое имущество у вас имеется?</legend>
-            <label class="quiz__label"
-              ><input
-                type="checkbox"
-                name="property"
-                value="apartment"
-                checked
-              />квартира (единственное жильё)</label
-            >
-            <label class="quiz__label"
-              ><input type="checkbox" name="property" value="land" />земельный
-              участок / загородный дом</label
-            >
-            <label class="quiz__label"
-              ><input
-                type="checkbox"
-                name="property"
-                value="car"
-              />автомобиль</label
-            >
-            <label class="quiz__label"
-              ><input type="checkbox" name="property" value="other" />иное
-              имущество</label
-            >
-            <label class="quiz__label"
-              ><input type="checkbox" name="property" value="none" />нет
-              имущества</label
-            >
-          </fieldset>
+            <!-- Вопрос 2 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Какое имущество у вас имеется?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="checkbox"
+                  name="property"
+                  value="apartment"
+                  checked
+                />квартира (единственное жильё)</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="checkbox"
+                  name="property"
+                  value="land"
+                />земельный участок / загородный дом</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="checkbox"
+                  name="property"
+                  value="car"
+                />автомобиль</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="checkbox"
+                  name="property"
+                  value="other"
+                />иное имущество</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="checkbox"
+                  name="property"
+                  value="none"
+                />нет имущества</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 3 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Сколько времени вы не платите по кредитам?</legend>
-            <label class="quiz__label"
-              ><input
-                type="radio"
-                name="credit_delay"
-                value="less3"
-                checked
-              />до 3-х месяцев</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="credit_delay" value="3-12" />от 3-х до
-              12-ти месяцев</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="credit_delay" value="more12" />больше
-              года</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="credit_delay" value="ontime" />плачу
-              вовремя</label
-            >
-          </fieldset>
+            <!-- Вопрос 3 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Сколько времени вы не платите по кредитам?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="credit_delay"
+                  value="less3"
+                  checked
+                />до 3-х месяцев</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="credit_delay"
+                  value="3-12"
+                />от 3-х до 12-ти месяцев</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="credit_delay"
+                  value="more12"
+                />больше года</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="credit_delay"
+                  value="ontime"
+                />плачу вовремя</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 4 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Имеется ли у вас действующая ипотека?</legend>
-            <label class="quiz__label"
-              ><input
-                type="radio"
-                name="mortgage"
-                value="yes"
-                checked
-              />да</label
-            >
-            <label class="quiz__label"><input type="radio" name="mortgage" value="no" /> нет</label>
-          </fieldset>
+            <!-- Вопрос 4 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Имеется ли у вас действующая ипотека?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="mortgage"
+                  value="yes"
+                  checked
+                />да</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="mortgage"
+                  value="no"
+                />
+                нет</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 5 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Имеется ли обязательство по выплате алиментов?</legend>
-            <label class="quiz__label"
-              ><input
-                type="radio"
-                name="alimony"
-                value="yes"
-                checked
-              />да</label
-            >
-            <label class="quiz__label"><input type="radio" name="alimony" value="no" />нет</label>
-          </fieldset>
+            <!-- Вопрос 5 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Имеется ли обязательство по выплате алиментов?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="alimony"
+                  value="yes"
+                  checked
+                />да</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="alimony"
+                  value="no"
+                />нет</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 6 -->
-          <fieldset class="quiz__fieldset">
-            <legend class="quiz__legend">Потребуется ли рассрочка на услуги банкротства?</legend>
-            <label class="quiz__label"
-              ><input
-                type="radio"
-                name="installment"
-                value="yes"
-                checked
-              />да</label
-            >
-            <label class="quiz__label"
-              ><input type="radio" name="installment" value="no" />нет</label
-            >
-          </fieldset>
+            <!-- Вопрос 6 -->
+            <fieldset class="quiz__fieldset">
+              <legend class="quiz__legend">
+                Потребуется ли рассрочка на услуги банкротства?
+              </legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="installment"
+                  value="yes"
+                  checked
+                />да</label
+              >
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="installment"
+                  value="no"
+                />нет</label
+              >
+            </fieldset>
 
-          <!-- Вопрос 6 -->
-          <fieldset class="quiz__fieldset quiz__fieldset-zero-margin">
-            <legend class="quiz__legend">Куда отправить расчёт?</legend>
-            <label class="quiz__label"
-              ><input
-                type="radio"
-                name="result"
-                value="in-call"
-                checked
-              />По звонку</label
-            >
-          </fieldset>
+            <!-- Вопрос 6 -->
+            <fieldset class="quiz__fieldset quiz__fieldset-zero-margin">
+              <legend class="quiz__legend">Куда отправить расчёт?</legend>
+              <label class="quiz__label"
+                ><input
+                  class="quiz__input"
+                  type="radio"
+                  name="result"
+                  value="in-call"
+                  checked
+                />По звонку</label
+              >
+            </fieldset>
+          </form>
         </div>
-        </form>
       </section>
-      <section class="calculator">
-        <div class="calculator__form-container">
-          <h3 class="calculator__title"></h3>
-          <form class="calculator__form" action="#" method="post">
-            <label for="full-name">Фамилия, имя и отчество</label>
+      <section class="form">
+        <div class="form__container">
+          <h3 class="form__title">Введите ваши данные</h3>
+          <form class="form__section" action="#" method="post">
             <input
-              class="calculator__form-input"
+              class="form__input"
               type="text"
               id="full-name"
               name="full_name"
@@ -238,22 +319,17 @@
               required
             />
 
-            <label for="city">Город</label>
-            <select
-              class="calculator__form-select"
-              id="city"
-              name="city"
-              required
-            >
-              <option value="" disabled selected>Город</option>
-              <option value="moscow">Москва</option>
-              <option value="spb">Санкт-Петербург</option>
-              <option value="other">Другой</option>
+            <select class="form__select" id="city" name="city" required>
+              <option class="form__option" value="" disabled selected>
+                Город
+              </option>
+              <option class="form__option" value="moscow">Москва</option>
+              <option class="form__option" value="spb">Санкт-Петербург</option>
+              <option class="form__option" value="other">Другой</option>
             </select>
 
-            <label for="phone">Номер телефона</label>
             <input
-              class="calculator__form-input"
+              class="form__input"
               type="tel"
               id="phone"
               name="phone"
@@ -261,34 +337,34 @@
               required
             />
 
-            <button class="calculator__form-submit-btn" type="submit">
+            <button class="form__submit-btn" type="submit">
               Рассчитать стоимость и сроки
             </button>
 
-            <p class="calculator__form-consent-text">
+            <p class="form__consent-text">
               Нажимая кнопку, вы даёте согласие на обработку персональных данных
               согласно
               <a href="#">политике конфиденциальности</a>
             </p>
           </form>
         </div>
-        <div class="calculator__column">
-          <div class="calculator__progress-bar">
+        <div class="form__column">
+          <div class="card form__progress-bar">
             <p>Уже заполнено</p>
             <p>70%</p>
             <p>Осталось совсем немного, чтобы списать долги</p>
           </div>
-          <div class="calculator__toggle calculator__toggle-active">
-            <button class="calculator__toggle-btn">
+          <div class="card form__toggle form__toggle-active">
+            <button class="form__toggle-btn">
               <span class="toggle-circle"></span>
             </button>
-            <h4 class="calculator__toggle-title"></h4>
+            <h4 class="form__toggle-title"></h4>
           </div>
-          <div class="calculator__toggle">
-            <button class="calculator__toggle-btn">
+          <div class="card form__toggle">
+            <button class="form__toggle-btn">
               <span class="toggle-circle"></span>
             </button>
-            <h4 class="calculator__toggle-title"></h4>
+            <h4 class="form__toggle-title"></h4>
           </div>
         </div>
       </section>
