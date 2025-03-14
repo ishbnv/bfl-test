@@ -339,49 +339,126 @@
 }
 
 .form__column {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'progress progress'
+    'toggle_left toggle_right';
+  height: 100%;
+  gap: 20px;
 }
 
-/* КНОПКА ПЕРЕКЛЮЧАТЕЛЯ, ВЕРНУТСЬЯ ПОЗЖЕ */
-
-/* body {
+.form__progress {
+  grid-area: progress;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  flex-direction: column;
+  padding: 24px;
+  gap: 10px;
 }
 
-Кнопка-переключатель
-.toggle-btn {
-  width: 50px;
-  height: 25px;
-  background-color: #ccc;
-  border-radius: 50px;
-  border: none;
+.form__progress-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+.form__progress-percent {
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+.form__progress-bar {
   position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+  height: 10px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-Внутренний круг
-.toggle-circle {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 50%;
+.form__progress-bar-fill {
+  height: 100%;
+  background-color: var(--green); /* или другой цвет, если нужно */
+}
+
+.form__progress-text {
+  color: #000;
+  margin: 0;
+}
+
+/* Переключатели (тумблеры) */
+.form__toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px;
+}
+
+.form__toggle-left {
+  grid-area: toggle_left;
+}
+
+.form__toggle-right {
+  grid-area: toggle_right;
+}
+
+.form__toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 62px;
+  height: 36px;
+  margin: 0;
+}
+
+.form__toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
   position: absolute;
-  top: 50%;
-  left: 5px;
-  transform: translateY(-50%);
-  transition: left 0.3s ease-in-out;
 }
 
-Активное состояние
-.toggle-btn.active {
-  background-color: #4caf50;
+.form__toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: #c4c4c4;
+  transition: 0.4s;
+  border-radius: 26px;
 }
 
-.toggle-btn.active .toggle-circle {
-  left: 25px;
-} */
+.form__toggle-slider:before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  left: 6px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* При включенном переключателе */
+.form__toggle-input:checked + .form__toggle-slider {
+  background-color: var(--green); /* или другой цвет */
+}
+
+.form__toggle-input:checked + .form__toggle-slider:before {
+  transform: translateX(22px);
+}
+
+/* Подпись к переключателю */
+.form__toggle-text {
+  font-size: 24px;
+  color: #000;
+  margin: 0;
+}
+

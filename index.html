@@ -349,22 +349,39 @@
           </form>
         </div>
         <div class="form__column">
-          <div class="card form__progress-bar">
-            <p>Уже заполнено</p>
-            <p>70%</p>
-            <p>Осталось совсем немного, чтобы списать долги</p>
+          <!-- Блок прогресс-бара -->
+          <div class="card form__progress">
+            <p class="form__progress-title">Уже заполнено</p>
+            <p class="form__progress-percent">70%</p>
+            <div class="form__progress-bar">
+              <!-- ширина заполнения 70% -->
+              <div class="form__progress-bar-fill" style="width: 70%"></div>
+            </div>
+            <p class="form__progress-text">
+              Осталось совсем немного, чтобы списать долги
+            </p>
           </div>
-          <div class="card form__toggle form__toggle-active">
-            <button class="form__toggle-btn">
-              <span class="toggle-circle"></span>
-            </button>
-            <h4 class="form__toggle-title"></h4>
+
+          <!-- Первый переключатель -->
+          <div class="card form__toggle form__toggle-left">
+            <label class="form__toggle-switch">
+              <input class="form__toggle-input" type="checkbox" checked />
+              <span class="form__toggle-slider"></span>
+            </label>
+            <p class="form__toggle-text">
+              Списать долги со 100% анонимностью данных
+            </p>
           </div>
-          <div class="card form__toggle">
-            <button class="form__toggle-btn">
-              <span class="toggle-circle"></span>
-            </button>
-            <h4 class="form__toggle-title"></h4>
+
+          <!-- Второй переключатель -->
+          <div class="card form__toggle form__toggle-right">
+            <label class="form__toggle-switch">
+              <input class="form__toggle-input" type="checkbox" />
+              <span class="form__toggle-slider"></span>
+            </label>
+            <p class="form__toggle-text">
+              Списать долги по госпограмме от 4990 рублей/месяц
+            </p>
           </div>
         </div>
       </section>
