@@ -71,11 +71,10 @@
           </div>
         </div>
       </section>
-
       <section class="quiz">
         <div class="card">
           <header class="quiz__header">
-            <h2 class="quiz__title">
+            <h2 class="title title__quiz">
               Ответьте на 7 простых вопросов, чтобы узнать шансы и стоимость
               списания долгов
             </h2>
@@ -386,11 +385,17 @@
         </div>
       </section>
       <section class="reviews">
+        <h2 class="title title__reviews">Отзывы</h2>
         <ul class="reviews__card-list">
           <li class="reviews__card-list-item">
-            <!-- position: relative -->
-            <article class="card">
-              <img class="card__image" src="#" alt="Аватар пользователя" />
+            <article class="card card__review">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="./images/placeholder.jpg"
+                  alt="Аватар пользователя"
+                />
+              </div>
               <div class="card__content">
                 <h5 class="card__title">Павлов Михаил Александрович</h5>
                 <p class="card__city-text">Пенза</p>
@@ -401,14 +406,18 @@
                   отзыва текст
                 </p>
               </div>
-              <!-- position: absolute -->
               <p class="card__counter">1 из 110</p>
             </article>
           </li>
           <li class="reviews__card-list-item">
-            <!-- position: relative -->
-            <article class="card">
-              <img class="card__image" src="#" alt="Аватар пользователя" />
+            <article class="card card__review">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="./images/placeholder.jpg"
+                  alt="Аватар пользователя"
+                />
+              </div>
               <div class="card__content">
                 <h5 class="card__title">Павлов Михаил Александрович</h5>
                 <p class="card__city-text">Пенза</p>
@@ -419,8 +428,51 @@
                   отзыва текст
                 </p>
               </div>
-              <!-- position: absolute -->
-              <p class="card__counter">1 из 110</p>
+              <p class="card__counter">2 из 110</p>
+            </article>
+          </li>
+          <li class="reviews__card-list-item">
+            <article class="card card__review">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="./images/placeholder.jpg"
+                  alt="Аватар пользователя"
+                />
+              </div>
+              <div class="card__content">
+                <h5 class="card__title">Павлов Михаил Александрович</h5>
+                <p class="card__city-text">Пенза</p>
+                <p class="card__text">
+                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                  текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст
+                </p>
+              </div>
+              <p class="card__counter">3 из 110</p>
+            </article>
+          </li>
+          <li class="reviews__card-list-item">
+            <article class="card card__review">
+              <div class="card__image-container">
+                <img
+                  class="card__image"
+                  src="./images/placeholder.jpg"
+                  alt="Аватар пользователя"
+                />
+              </div>
+              <div class="card__content">
+                <h5 class="card__title">Павлов Михаил Александрович</h5>
+                <p class="card__city-text">Пенза</p>
+                <p class="card__text">
+                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                  текст отзыва текст отзыва текст отзыва текст отзыва текст
+                  отзыва текст
+                </p>
+              </div>
+              <p class="card__counter">4 из 110</p>
             </article>
           </li>
         </ul>
@@ -451,6 +503,6 @@
         <p></p>
       </div>
     </footer>
-    <script src="./scripts/toggle-button.js"></script>
+    <script src="/scripts/reviews-carousel.js"></script>
   </body>
 </html>

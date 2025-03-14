@@ -81,6 +81,7 @@
   width: 100%;
   border-radius: var(--card__border-radius);
   background-color: var(--secondary-color);
+  position: relative;
 }
 
 .card__cover {
@@ -164,11 +165,14 @@
   background-color: var(--main-color);
 }
 
-.quiz__title {
-  width: 60%;
-  color: #fff;
+.title {
   font-weight: 600;
   font-size: 32px;
+}
+
+.title__quiz {
+  width: 60%;
+  color: #fff;
 }
 
 /* .quiz-container {
@@ -208,7 +212,6 @@
 
 .quiz__input[type="radio"],
 .quiz__input[type="checkbox"] {
-  position: relative;
   position: relative;
   display: inline-block;
   width: 1.5em;
@@ -446,19 +449,98 @@
   transition: 0.4s;
 }
 
-/* При включенном переключателе */
 .form__toggle-input:checked + .form__toggle-slider {
-  background-color: var(--green); /* или другой цвет */
+  background-color: var(--green);
 }
 
 .form__toggle-input:checked + .form__toggle-slider:before {
   transform: translateX(22px);
 }
 
-/* Подпись к переключателю */
 .form__toggle-text {
   font-size: 24px;
   color: #000;
   margin: 0;
 }
 
+.reviews {
+  padding: 120px 40px 90px;
+}
+
+.title__reviews {
+  padding-bottom: 36px;
+  
+}
+
+.card__review {
+  display: flex;
+  border-radius: 10px;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.reviews__card-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  overflow: hidden;
+  transition: transform 0.5s ease; 
+}
+
+.reviews__card-list-item {
+  flex: 0 0 50%;
+}
+
+.card__content {
+  width: 80%;
+}
+
+.card__image-container {
+  max-width: 100px;
+  height: min-content;
+}
+
+.card__image {
+  max-width: 100px;
+  object-fit: cover;
+}
+
+.card__counter {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.reviews__card-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  padding-top: 24px;
+}
+
+.button__right,
+.button__left {
+  position: relative;
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  border: 1px solid rgb(0 0 0 / .2);
+  border-radius: 50%;
+  vertical-align: text-bottom;
+  background: #fff;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('../images/LeftButton.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.button__left {
+  background-image: url('../images/LeftButton.svg');
+}
+
+.button__right {
+  background-image: url('../images/RightButton.svg');
+}
