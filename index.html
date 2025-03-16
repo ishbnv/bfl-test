@@ -10,19 +10,21 @@
     <title>Узнайте, как бесплатно списать долги через МФЦ без суда</title>
   </head>
   <body>
-    <header class="header layout-common">
+    <header class="header">
       <a class="header__logo" href="#">
         <img
-          class="header__logo-image"
+          class="logo-image"
           src="./images/logo.svg"
           alt="Логотип 'Госбанкротство'"
         />
       </a>
-      <address class="address address__header">
-        <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
-        <p class="address__text">Работаем в 130 городах России</p>
-      </address>
-      <button class="button button__header">Бесплатная консультация</button>
+      <div class="header__left-part">
+        <address class="address address__header">
+          <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
+          <p class="address__text">Работаем в 130 городах России</p>
+        </address>
+        <button class="button button__header">Бесплатная консультация</button>
+      </div>
     </header>
     <main>
       <section class="cover">
@@ -336,7 +338,7 @@
               required
             />
 
-            <button class="form__submit-btn" type="submit">
+            <button class="button form__submit-button" type="submit">
               Рассчитать стоимость и сроки
             </button>
 
@@ -386,121 +388,123 @@
       </section>
       <section class="reviews">
         <h2 class="title title__reviews">Отзывы</h2>
-        <ul class="reviews__card-list">
-          <li class="reviews__card-list-item">
-            <article class="card card__review">
-              <div class="card__image-container">
-                <img
-                  class="card__image"
-                  src="./images/placeholder.jpg"
-                  alt="Аватар пользователя"
-                />
-              </div>
-              <div class="card__content">
-                <h5 class="card__title">Павлов Михаил Александрович</h5>
-                <p class="card__city-text">Пенза</p>
-                <p class="card__text">
-                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                  текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст
-                </p>
-              </div>
-              <p class="card__counter">1 из 110</p>
-            </article>
-          </li>
-          <li class="reviews__card-list-item">
-            <article class="card card__review">
-              <div class="card__image-container">
-                <img
-                  class="card__image"
-                  src="./images/placeholder.jpg"
-                  alt="Аватар пользователя"
-                />
-              </div>
-              <div class="card__content">
-                <h5 class="card__title">Павлов Михаил Александрович</h5>
-                <p class="card__city-text">Пенза</p>
-                <p class="card__text">
-                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                  текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст
-                </p>
-              </div>
-              <p class="card__counter">2 из 110</p>
-            </article>
-          </li>
-          <li class="reviews__card-list-item">
-            <article class="card card__review">
-              <div class="card__image-container">
-                <img
-                  class="card__image"
-                  src="./images/placeholder.jpg"
-                  alt="Аватар пользователя"
-                />
-              </div>
-              <div class="card__content">
-                <h5 class="card__title">Павлов Михаил Александрович</h5>
-                <p class="card__city-text">Пенза</p>
-                <p class="card__text">
-                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                  текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст
-                </p>
-              </div>
-              <p class="card__counter">3 из 110</p>
-            </article>
-          </li>
-          <li class="reviews__card-list-item">
-            <article class="card card__review">
-              <div class="card__image-container">
-                <img
-                  class="card__image"
-                  src="./images/placeholder.jpg"
-                  alt="Аватар пользователя"
-                />
-              </div>
-              <div class="card__content">
-                <h5 class="card__title">Павлов Михаил Александрович</h5>
-                <p class="card__city-text">Пенза</p>
-                <p class="card__text">
-                  Текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст отзыва текст отзыва текст отзыва текст отзыва
-                  текст отзыва текст отзыва текст отзыва текст отзыва текст
-                  отзыва текст
-                </p>
-              </div>
-              <p class="card__counter">4 из 110</p>
-            </article>
-          </li>
-        </ul>
+        <div class="reviews__list-wrapper">
+          <ul class="reviews__card-list">
+            <li class="reviews__card-list-item">
+              <article class="card card__review">
+                <div class="card__image-container">
+                  <img
+                    class="card__image"
+                    src="./images/placeholder.jpg"
+                    alt="Аватар пользователя"
+                  />
+                </div>
+                <div class="card__content">
+                  <h5 class="card__title">Павлов Михаил Александрович</h5>
+                  <p class="card__city-text">Пенза</p>
+                  <p class="card__text">
+                    Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                    текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст
+                  </p>
+                </div>
+                <p class="card__counter">1 из 110</p>
+              </article>
+            </li>
+            <li class="reviews__card-list-item">
+              <article class="card card__review">
+                <div class="card__image-container">
+                  <img
+                    class="card__image"
+                    src="./images/placeholder.jpg"
+                    alt="Аватар пользователя"
+                  />
+                </div>
+                <div class="card__content">
+                  <h5 class="card__title">Павлов Михаил Александрович</h5>
+                  <p class="card__city-text">Пенза</p>
+                  <p class="card__text">
+                    Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                    текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст
+                  </p>
+                </div>
+                <p class="card__counter">2 из 110</p>
+              </article>
+            </li>
+            <li class="reviews__card-list-item">
+              <article class="card card__review">
+                <div class="card__image-container">
+                  <img
+                    class="card__image"
+                    src="./images/placeholder.jpg"
+                    alt="Аватар пользователя"
+                  />
+                </div>
+                <div class="card__content">
+                  <h5 class="card__title">Павлов Михаил Александрович</h5>
+                  <p class="card__city-text">Пенза</p>
+                  <p class="card__text">
+                    Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                    текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст
+                  </p>
+                </div>
+                <p class="card__counter">3 из 110</p>
+              </article>
+            </li>
+            <li class="reviews__card-list-item">
+              <article class="card card__review">
+                <div class="card__image-container">
+                  <img
+                    class="card__image"
+                    src="./images/placeholder.jpg"
+                    alt="Аватар пользователя"
+                  />
+                </div>
+                <div class="card__content">
+                  <h5 class="card__title">Павлов Михаил Александрович</h5>
+                  <p class="card__city-text">Пенза</p>
+                  <p class="card__text">
+                    Текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст отзыва текст отзыва текст отзыва текст отзыва
+                    текст отзыва текст отзыва текст отзыва текст отзыва текст
+                    отзыва текст
+                  </p>
+                </div>
+                <p class="card__counter">4 из 110</p>
+              </article>
+            </li>
+          </ul>
+        </div>
         <div class="reviews__card-switcher">
           <button class="button__left"></button>
           <button class="button__right"></button>
         </div>
       </section>
     </main>
-    <footer>
-      <a class="header__logo" href="#">
+    <footer class="footer">
+      <a class="footer__logo" href="#">
         <img
-          class="header__logo-image"
+          class="logo-image"
           src="./images/logo.svg"
           alt="Логотип 'Госбанкротство'"
         />
       </a>
       <div class="footer__info-block">
-        <address class="address">
+        <address class="address address__footer">
           <a class="address__link" href="tel:+88003500814">8 (800) 350-08-14</a>
-          <p>Работаем в 130 городах России</p>
+          <p class="footer__text">Работаем в 130 городах России</p>
         </address>
         <address class="juridical-info">
           ИП Староквашев Денис Валерьевич ИНН 631973075209 | ОГРНИП
           318631300056420 | bflleadpromo@yandex.ru
         </address>
-        <a class="footer__link" href="#">Все права защищены © 2025</a>
-        <p></p>
+        <a class="footer__link" href="#">Политика конфиденциальности</a>
+        <p class="footer__text">Все права защищены © 2025</p>
       </div>
     </footer>
     <script src="/scripts/reviews-carousel.js"></script>

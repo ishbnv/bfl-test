@@ -1,6 +1,7 @@
 :root {
   --main-color: #3965ad;
   --accent-color: #f2444e;
+  --button-hover: #c0392b;
   --secondary-color: #f3f4f9;
   --green: #2bb046;
   --article-secondary: #252a38;
@@ -11,25 +12,23 @@
   --card__border-radius: 28px;
 }
 
-/* .layout-common {
-  padding: 0 40px;
-  font-weight: normal;
-  
-} */
-
-.container {
-}
-
 .header {
-  display: grid;
-  grid-template-columns: 1fr 1fr max-content;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 16px 40px;
 }
 
-.header__logo-image {
+.logo-image {
   max-width: 228px;
+}
+
+.header__left-part {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
 }
 
 .address {
@@ -41,7 +40,6 @@
 
 .address__header {
   align-items: end;
-  padding: 0 20px;
   line-height: 120%;
 }
 
@@ -53,7 +51,7 @@
 }
 
 .address__text {
-  color: rgb(0 0 0 / 0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 16px;
 }
 
@@ -64,13 +62,19 @@
   padding: var(--button-padding);
   font-weight: var(--font-weight-demibold);
   font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .button__header {
-  border-color: rgb(70 70 70 / 0.5);
+  border-color: rgba(70, 70, 70, 0.5);
   color: var(--main-color);
-  /* Убрать тень — контейнер растянут */
   background-color: transparent;
+}
+
+.button__header:hover {
+  color: #fff;
+  background-color: var(--main-color);
 }
 
 .cover {
@@ -78,23 +82,18 @@
 }
 
 .card {
+  position: relative;
   width: 100%;
   border-radius: var(--card__border-radius);
   background-color: var(--secondary-color);
-  position: relative;
 }
 
 .card__cover {
   display: grid;
-  flex-wrap: wrap;
   grid-template-columns: 7fr 3fr;
   justify-content: space-between;
   align-items: center;
   padding: 60px 30px 30px;
-  background-color: var(--secondary-color);
-}
-
-.cover__header {
 }
 
 .cover__title {
@@ -123,6 +122,11 @@
 .button__cover {
   color: #fff;
   background-color: var(--accent-color);
+}
+
+.button__cover:hover,
+.form__submit-button:hover {
+  background-color: var(--button-hover);
 }
 
 .cover__benefits-list {
@@ -175,15 +179,8 @@
   color: #fff;
 }
 
-/* .quiz-container {
-  width: 400px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-} */
-
 .quiz__form {
-  padding: 1.8em 2em;
+  padding: 36px 40px;
 }
 
 .quiz__fieldset {
@@ -242,10 +239,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 0.5em;
-  height: 0.5em;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: white;
+  background: #fff;
   transform: translate(-50%, -50%);
 }
 
@@ -260,7 +257,7 @@
 .quiz__input[type="checkbox"]:checked {
   border-color: var(--main-color);
   background: var(--main-color);
-  background-image: url('../images/Check.svg');
+  background-image: url("../images/Check.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10px 10px;
@@ -282,13 +279,14 @@
 }
 
 .form__container {
+  height: 100%;
   padding: 48px 115px 52px 42px;
-  color: white;
+  color: #fff;
   background-color: #3b5998;
 }
 
 .form__title {
-  margin-bottom: 20px;
+  padding-bottom: 36px;
   font-weight: 600;
   font-size: 28px;
 }
@@ -299,13 +297,14 @@
   gap: 12px;
 }
 
-.form__input, .form__select {
+.form__input,
+.form__select {
   width: 100%;
   border: none;
   border-radius: 14px;
   padding: 19px 14px;
   outline: none;
-  color: white;
+  color: #fff;
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -314,20 +313,15 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
-.form__submit-btn {
+.form__submit-button {
+  width: 100%;
   margin-top: 10px;
   border: none;
   border-radius: 14px;
   padding: 19px 14px;
-  color: white;
+  color: #fff;
   font-size: 18px;
   background-color: var(--accent-color);
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.form__submit-btn:hover {
-  background-color: #c0392b;
 }
 
 .form__consent-text {
@@ -337,7 +331,7 @@
 }
 
 .form__consent-text a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -346,59 +340,58 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
-    'progress progress'
-    'toggle_left toggle_right';
-  height: 100%;
+    "progress progress"
+    "toggle_left toggle_right";
   gap: 20px;
+  height: 100%;
 }
 
 .form__progress {
-  grid-area: progress;
   display: flex;
   flex-direction: column;
-  padding: 24px;
+  grid-area: progress;
+  justify-content: center;
   gap: 10px;
+  padding: 44px;
 }
 
 .form__progress-title {
-  font-size: 16px;
-  font-weight: 500;
   margin: 0;
   color: #000;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .form__progress-percent {
-  font-size: 48px;
-  font-weight: 500;
   margin: 0;
   color: #000;
+  font-weight: 500;
+  font-size: 48px;
 }
 
 .form__progress-bar {
   position: relative;
-  width: 100%;
-  height: 10px;
-  background-color: #e7e7e7;
+  width: 70%;
+  height: 13px;
   border-radius: 5px;
   overflow: hidden;
+  background-color: #e7e7e7;
 }
 
 .form__progress-bar-fill {
   height: 100%;
-  background-color: var(--green); /* или другой цвет, если нужно */
+  background-color: var(--green);
 }
 
 .form__progress-text {
+  padding-top: 14px;
   color: #000;
-  margin: 0;
 }
 
-/* Переключатели (тумблеры) */
 .form__toggle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 12px;
   padding: 24px;
 }
 
@@ -419,33 +412,33 @@
 }
 
 .form__toggle-input {
-  opacity: 0;
+  position: absolute;
   width: 0;
   height: 0;
-  position: absolute;
+  opacity: 0;
 }
 
 .form__toggle-slider {
   position: absolute;
-  cursor: pointer;
-  top: 0; 
-  left: 0; 
-  right: 0; 
+  top: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
+  border-radius: 26px;
   background-color: #c4c4c4;
   transition: 0.4s;
-  border-radius: 26px;
+  cursor: pointer;
 }
 
 .form__toggle-slider:before {
   content: "";
   position: absolute;
-  height: 28px;
-  width: 28px;
-  left: 6px;
   bottom: 4px;
-  background-color: #fff;
+  left: 6px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+  background-color: #fff;
   transition: 0.4s;
 }
 
@@ -458,41 +451,69 @@
 }
 
 .form__toggle-text {
-  font-size: 24px;
-  color: #000;
   margin: 0;
+  color: #000;
+  font-size: 24px;
 }
 
 .reviews {
-  padding: 120px 40px 90px;
+  padding: 120px 30px 90px;
 }
 
 .title__reviews {
-  padding-bottom: 36px;
-  
+  padding: 0 0 36px 10px;
 }
 
 .card__review {
   display: flex;
+  justify-content: space-between;
   border-radius: 10px;
   padding: 20px;
-  justify-content: space-between;
 }
 
 .reviews__card-list {
   display: flex;
+  width: 100%;
+  overflow: visible;
   list-style: none;
-  gap: 20px;
-  overflow: hidden;
-  transition: transform 0.5s ease; 
+  transition: transform 0.5s ease;
 }
 
 .reviews__card-list-item {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 20px);
+  margin: 0 10px;
+}
+
+.reviews__list-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.reviews .card__image {
+  border-radius: 10px;
+}
+
+.card__content,
+.card__title {
+  
+  font-size: 18px;
 }
 
 .card__content {
   width: 80%;
+}
+
+.card__title {
+  padding-bottom: 8px;
+}
+
+.card__city-text {
+  color: #959595;
+}
+
+.card__text {
+  padding-top: 18px;
 }
 
 .card__image-container {
@@ -507,10 +528,10 @@
 
 .card__counter {
   position: absolute;
-  right: 14px;
   top: 14px;
-  font-size: 16px;
+  right: 14px;
   opacity: 0.5;
+  font-size: 16px;
 }
 
 .reviews__card-switcher {
@@ -524,23 +545,62 @@
 .button__left {
   position: relative;
   display: inline-block;
-  width: 2.4em;
-  height: 2.4em;
-  border: 1px solid rgb(0 0 0 / .2);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   vertical-align: text-bottom;
   background: #fff;
-  cursor: pointer;
-  appearance: none;
-  background-image: url('../images/LeftButton.svg');
+  background-image: url("../images/LeftButton.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
+  appearance: none;
 }
 
 .button__left {
-  background-image: url('../images/LeftButton.svg');
+  background-image: url("../images/LeftButton.svg");
 }
 
 .button__right {
-  background-image: url('../images/RightButton.svg');
+  background-image: url("../images/RightButton.svg");
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgb(0 0 0 / 0.2);
+  padding: 30px 40px 20px;
+  font-size: 18px;
+}
+
+.footer__info-block {
+  display: grid;
+  grid-template-areas:
+    "phone juridical-info"
+    "politics copywrite";
+  gap: 30px 16em;
+  width: fit-content;
+}
+
+.footer__text,
+.juridical-info,
+.footer__link {
+  max-width: 360px;
+  opacity: 0.4;
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.address__footer {
+  line-height: 150%;
+}
+
+.footer__logo {
+  align-self: start;
+}
+
+
