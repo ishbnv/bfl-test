@@ -280,7 +280,7 @@
 
 .form__container {
   height: 100%;
-  padding: 48px 115px 52px 42px;
+  padding: 48px 42px 52px;
   color: #fff;
   background-color: #3b5998;
 }
@@ -295,6 +295,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 513px;
 }
 
 .form__input,
@@ -596,7 +597,20 @@
 }
 
 .address__footer {
+  grid-area: phone;
   line-height: 150%;
+}
+
+.juridical-info {
+  grid-area: juridical-info;
+}
+
+.footer__link {
+  grid-area: politics;
+}
+
+.footer__text {
+  grid-area: copywrite;
 }
 
 .footer__logo {
