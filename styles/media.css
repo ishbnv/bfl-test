@@ -1,0 +1,69 @@
+@media (max-width: 1024px) {
+  .reviews__card-list-item {
+    flex: 0 0 100%;
+    margin: 0 auto 20px; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 1470px;
+    padding: 0 15px;
+  }
+
+  .card__cover {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .cover__description {
+    width: 100%;
+    padding: 18px 0;
+    color: var(--article-secondary);
+  }
+
+  .cover__benefits-list {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  /* 1) Форма и блоки с прогрессом/переключателями в столбик */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form__container,
+  .form__column {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px; /* Чтобы они не слипались */
+  }
+
+  /* 2) В отзывах показываем по одному блоку */
+  .reviews__card-list-item {
+    flex: 0 0 100%;
+    margin: 0 auto 20px; 
+  }
+
+  /* 3) В футере логотип и информация идут в столбик */
+  .footer {
+    flex-direction: column;
+    align-items: center; /* Чтобы текст центрировался */
+  }
+
+  .footer__info-block {
+    display: grid; /* Можно и просто block, но flex позволит управлять отступами */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas:
+      "phone juridical-info"
+      "politics copywrite";
+    /* Так секции окажутся одна под другой */
+  }
+
+  .footer__logo {
+    margin-bottom: 20px;
+  }
+}
