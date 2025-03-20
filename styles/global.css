@@ -5,11 +5,16 @@
 }
 
 body {
-  width: 1440px;
   margin: 0 auto;
   font-family: GolosText_VF, sans-serif;
   font-size: 20px;
   background-color: #FEFEFF;
+}
+
+.container {
+  max-width: 1520px;
+  padding: 0 40px;
+  margin: 0 auto;
 }
 
 h1,
